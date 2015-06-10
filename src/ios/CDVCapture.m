@@ -756,7 +756,7 @@
         __block NSError* error = nil;
         
         void (^startRecording)(void) = ^{
-            [self.avSession setCategory:AVAudioSessionCategoryRecord error:&error];
+            [self.avSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
             [self.avSession setActive:YES error:&error];
             if (error) {
                 // can't continue without active audio session
